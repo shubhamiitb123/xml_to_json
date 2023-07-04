@@ -207,7 +207,7 @@ if file is not None:
                 "Financial liabilities": {
                     "Borrowings": non_current_borrowing,
                     "Other financial liabilities +lease liabilities": other_non_current_financial_assets,
-                    "non current Lease liabilities": non_current_lease_liabilities
+                    # "non current Lease liabilities": non_current_lease_liabilities
                 },
                 "Other non-current liabilities ": other_non_current_liabilities,
                 "Provisions non-current":provisions_non_current,
@@ -222,7 +222,7 @@ if file is not None:
     #                 "Total outstanding dues of creditors other than micro enterprises and small enterprises": dues_of_creditors,
                     "Trade Payable current (sum of upper due of micro + creditors)":trade_payable_current,
                     "Other current financial liabilities +lease liabilities": other_current_financial_liabilities,
-                    "current Lease liabilities": current_lease_liabilities
+                    # "current Lease liabilities": current_lease_liabilities
                 },
                 "Other current liabilities": other_current_liabilites,
                 "Provisions": current_provisions,
