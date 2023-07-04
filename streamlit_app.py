@@ -173,8 +173,8 @@ if file is not None:
                     "Loans": non_current_loans,
                     "Other financial assets": other_non_current_financial_assets
                 },
-                "Income tax assets": non_current_incometax_assets,
-                "Other non-current assets": other_non_current_assets,
+    #             "Income tax assets": non_current_incometax_assets,
+                "Other non-current assets + incometax asset": other_non_current_assets,
                 "Deferred tax assets net": non_current_deferredtax_net,
                 "Total Non-Current Assets": total_non_current_assets
             },
@@ -188,8 +188,8 @@ if file is not None:
                     "Loans": current_loans,
                     "Other financial assets": other_current_financial_assets
                 },
-                "Other current assets": other_current_assets,
-                "Income Tax Assets": other_current_income_tax_assets,
+                "Other current assets + income tax asset": other_current_assets,
+    #             "Income Tax Assets": other_current_income_tax_assets,
                 "Total Current Assets": total_current_assets,
                 "Assets held for sale": other_current_assets_for_sale,
             },
@@ -198,18 +198,18 @@ if file is not None:
         "Equity and Liabilities": {
             "Equity": {
                 "Equity share capital": equity_share_capital,
-                "Other equity": other_equity,
-                "Non-controlling interest": non_controlling_interest,
+                "Other equity + non controlling": other_equity,
+    #             "Non-controlling interest": non_controlling_interest,
                 "Equity attributable to Owners of the Parent": equity_attributable_to_owners_of_parent,
-                "Total equity": total_equity
+                "Total equity ": total_equity
             },
             "Non-current liabilities": {
                 "Financial liabilities": {
                     "Borrowings": non_current_borrowing,
-                    "Other financial liabilities": other_non_current_financial_assets,
+                    "Other financial liabilities +lease liabilities": other_non_current_financial_assets,
                     "non current Lease liabilities": non_current_lease_liabilities
                 },
-                "Other non-current liabilities": other_non_current_liabilities,
+                "Other non-current liabilities ": other_non_current_liabilities,
                 "Provisions non-current":provisions_non_current,
                 "Deferred tax liabilities net": non_current_deferredtax_liabilities_net,
                 "Government Grants": government_grants,
@@ -218,10 +218,10 @@ if file is not None:
             "Current liabilities": {
                 "Financial liabilities": {
                     "Borrowings": current_borrowing,
-                    "Total outstanding dues of micro enterprises and small enterprises": dues_of_micro_enterprises,
-                    "Total outstanding dues of creditors other than micro enterprises and small enterprises": dues_of_creditors,
-                    "Trade Payable current (sum of upper two)":trade_payable_current,
-                    "Other current financial liabilities": other_current_financial_liabilities,
+    #                 "Total outstanding dues of micro enterprises and small enterprises": dues_of_micro_enterprises,
+    #                 "Total outstanding dues of creditors other than micro enterprises and small enterprises": dues_of_creditors,
+                    "Trade Payable current (sum of upper due of micro + creditors)":trade_payable_current,
+                    "Other current financial liabilities +lease liabilities": other_current_financial_liabilities,
                     "current Lease liabilities": current_lease_liabilities
                 },
                 "Other current liabilities": other_current_liabilites,
@@ -233,7 +233,6 @@ if file is not None:
             "Total Equity and Liabilities":total_equity_liabilities,
         }
     }
-
     st.subheader('Data from XML')
     st.json(json_data)
     # st.write(json.dumps(json_data,indent=4))
