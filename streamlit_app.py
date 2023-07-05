@@ -184,7 +184,7 @@ if file is not None:
                     "Investments": current_investments,
                     "Trade receivables":  current_trade_receivables,
                     "Cash and cash equivalents":cash_and_cash_equivalents,
-                    "Bank balances other than": bank_balance_other_than_cash_equivalent,
+                    "Bank balances other than cash and cash equivalents": bank_balance_other_than_cash_equivalent,
                     "Loans": current_loans,
                     "Other financial assets": other_current_financial_assets
                 },
